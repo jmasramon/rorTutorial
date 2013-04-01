@@ -35,9 +35,9 @@ describe "StaticPages" do
       it "should have the content 'About Us'" do
         visit '/static_pages/about'
         page.should have_content('About Us')
-      page.should have_selector('title',
+        page.should have_selector('title',
 
-                                :text => "Ruby on Rails Tutorial Sample App | About")
+                                  :text => "Ruby on Rails Tutorial Sample App | About")
 
 
       end

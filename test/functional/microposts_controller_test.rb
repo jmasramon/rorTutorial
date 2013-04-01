@@ -1,4 +1,6 @@
 require 'test_helper'
+require 'minitest/reporters'
+MiniTest::Reporters.use!
 
 class MicropostsControllerTest < ActionController::TestCase
   setup do
@@ -18,7 +20,7 @@ class MicropostsControllerTest < ActionController::TestCase
 
   test "should create micropost" do
     assert_difference('Micropost.count') do
-      post :create, micropost: { content: @micropost.content, user_id: @micropost.user_id }
+      post :create, micropost: {content: @micropost.content, user_id: @micropost.user_id}
     end
 
     assert_redirected_to micropost_path(assigns(:micropost))
@@ -35,7 +37,7 @@ class MicropostsControllerTest < ActionController::TestCase
   end
 
   test "should update micropost" do
-    put :update, id: @micropost, micropost: { content: @micropost.content, user_id: @micropost.user_id }
+    put :update, id: @micropost, micropost: {content: @micropost.content, user_id: @micropost.user_id}
     assert_redirected_to micropost_path(assigns(:micropost))
   end
 

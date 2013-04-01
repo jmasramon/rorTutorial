@@ -1,4 +1,6 @@
 require 'test_helper'
+require 'minitest/reporters'
+MiniTest::Reporters.use!
 
 class MicropostTest < ActiveSupport::TestCase
   # test "the truth" do

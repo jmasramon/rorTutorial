@@ -40,8 +40,6 @@ class MicropostsController < ApplicationController
   # POST /microposts
   # POST /microposts.json
   def create
-
-
     @micropost = Micropost.new(params[:micropost])
 
     respond_to do |format|
@@ -49,7 +47,7 @@ class MicropostsController < ApplicationController
         format.html { redirect_to @micropost, notice: 'Micropost was successfully created.' }
         format.json { render json: @micropost, status: :created, location: @micropost }
       else
-        format.html { render action: "new" }
+        format.html { render action: 'new' }
         format.json { render json: @micropost.errors, status: :unprocessable_entity }
       end
     end
@@ -65,7 +63,7 @@ class MicropostsController < ApplicationController
         format.html { redirect_to @micropost, notice: 'Micropost was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: 'edit' }
         format.json { render json: @micropost.errors, status: :unprocessable_entity }
       end
     end

@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'therubyracer', require: "v8"
 end
 
 
@@ -26,16 +27,13 @@ end
 gem 'jquery-rails'
 
 group :test do
-  if RUBY_PLATFORM =~ /(win32|w32)/
-    gem "win32console", '1.3.0'
-  end
   gem 'capybara', '1.1.2'
   gem "minitest"
   gem "minitest-reporters", '>= 0.5.0'
 end
 
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'pg' #, '0.12.2'
 end
 
 # To use ActiveModel has_secure_password

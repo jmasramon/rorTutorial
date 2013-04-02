@@ -9,6 +9,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'therubyracer', require: "v8"
+  gem 'guard-rspec'
 end
 
 
@@ -30,6 +31,10 @@ group :test do
   gem 'capybara', '1.1.2'
   gem "minitest"
   gem "minitest-reporters", '>= 0.5.0'
+  gem 'guard-spork'
+  gem "spork"
+  gem 'rb-inotify', '~> 0.9'
+  gem 'libnotify'
 end
 
 group :production do
